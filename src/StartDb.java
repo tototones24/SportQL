@@ -9,7 +9,6 @@ public class StartDb {
 
     public static void main(String[] args) {
 
-
         boolean dbActive = true;
         while (dbActive) {
             Scanner in = new Scanner(System.in);
@@ -19,8 +18,8 @@ public class StartDb {
                 System.out.println(str);
             }
 
-            ParseQuery.executeQuery(pieces, dbActive);
-            //TODO:dbActive does not change value.
+            dbActive = ParseQuery.executeQuery(pieces, dbActive);
+
 
         }
 
