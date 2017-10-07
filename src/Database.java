@@ -48,6 +48,7 @@ public class Database {
         db.removeTable("table1");
         db.showAll();
         //TODO once test cases for the TABLE class are done make sure to test cross interaction.
+        //test with
     }
 
 }

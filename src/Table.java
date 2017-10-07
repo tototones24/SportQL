@@ -39,7 +39,24 @@ public class Table {
         //TODO, how will i remove these
     }
 
+    /*
+     * Shows all of the records in the table.
+     */
+    public void showRecords() {
+        for (int num : table.keySet()) {
+            table.get(num);
+            for (int i = 0; i < table.get(num).size(); i++) {
+                System.out.print(table.get(num).get(i) + " ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         //TODO think of test cases for the table class.
+        Table table = new Table("Table1", "Baseball");
+        table.insertRecord("Tony", "Yankees", "SS", "186");
+        table.insertRecord("Caleb", "Dodgers", "1B", "00");
+        table.showRecords();
     }
 }
