@@ -8,18 +8,22 @@ public class StartDb {
 
 
     public static void main(String[] args) {
-
+        Database newDB = new Database();
         boolean dbActive = true;
         while (dbActive) {
+
             Scanner in = new Scanner(System.in);
             String query = in.nextLine();
-            String[] pieces = query.split("\\s+");
-            for (String str : pieces) {
-                System.out.println(str);
-            }
+            String[] tokens = query.split("\\s+");
 
-            dbActive = ParseQuery.executeQuery(pieces, dbActive);
 
+
+            ParseQuery parser = new ParseQuery();
+            dbActive = parser.executeQuery(tokens, dbActive, newDB);
+
+
+
+            
 
         }
 
